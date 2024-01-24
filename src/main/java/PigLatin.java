@@ -52,7 +52,7 @@ public class PigLatin {
 	    if(sWord.length() <= 0){
 		    return sWord;
 	    } else if(findFirstVowel(sWord) >= 1){
-		    return sWord.substring(1, sWord.length()) + sWord.substring(0, 1) + "ay";
+		    return sWord.substring(findFirstVowel(sWord), sWord.length()) + sWord.substring(0, findFirstVowel(sWord)) + "ay";
 	    } else if(findFirstVowel(sWord) == 0){
 		    return sWord + "ay";
 	    } else if(sWord.substring(0, 2).equals("qu")){
